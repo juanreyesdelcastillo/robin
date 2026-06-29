@@ -1,0 +1,377 @@
+# 🚀 GUÍA PASO A PASO: INSTALAR EN HOSTINGER
+
+## Instrucciones Detalladas para Robin Herrajes
+
+---
+
+## PASO 1: Preparar tus Archivos Localmente
+
+### 1.1 Crear la estructura en tu computadora
+
+En una carpeta llamada `robin-herrajes`, coloca esto:
+
+```
+robin-herrajes/
+├── index.html
+├── catalogo.html
+├── sobre-nosotros.html
+├── contacto.html
+├── css/
+│   └── estilos.css
+└── js/
+    └── main.js
+```
+
+### 1.2 Personalizar los archivos ANTES de subir
+
+**IMPORTANTE:** Edita estos datos en todos los archivos HTML:
+
+#### A. Busca y reemplaza el número de WhatsApp:
+
+En `js/main.js` (línea ~290):
+```javascript
+// ANTES:
+const numeroWhatsApp = '5299999999';
+
+// DESPUÉS (tu número):
+const numeroWhatsApp = '523366660312';
+```
+
+#### B. Email de contacto:
+
+En todos los HTML (busca `herraform@herralum.com`):
+```html
+<!-- ANTES: -->
+herraform@herralum.com
+
+<!-- DESPUÉS (tu email): -->
+tu-email@tudominio.com
+```
+
+#### C. Teléfono:
+
+Busca `(33) 3666-0312` y reemplaza con tu teléfono.
+
+#### D. Dirección:
+
+En `sobre-nosotros.html` y `contacto.html`, actualiza tu dirección real.
+
+---
+
+## PASO 2: Acceder a Hostinger
+
+### 2.1 Inicia sesión en tu cuenta
+
+1. Ve a `hostinger.com`
+2. Haz login con tu usuario y contraseña
+3. Ve al panel de control (Dashboard)
+
+### 2.2 Acceder al gestor de archivos
+
+En el panel principal:
+- Busca **"File Manager"** o **"Gestor de Archivos"**
+- Haz click en él
+
+---
+
+## PASO 3: Subir los Archivos (Dos Opciones)
+
+### OPCIÓN A: Upload Manual (Recomendado para principiantes)
+
+1. **Abre el gestor de archivos**
+   - Verás una carpeta llamada `public_html`
+
+2. **Sube los archivos HTML**
+   - Abre la carpeta `public_html`
+   - Botón **"Upload"** o **"Subir"**
+   - Selecciona y sube:
+     - `index.html`
+     - `catalogo.html`
+     - `sobre-nosotros.html`
+     - `contacto.html`
+
+3. **Crea la carpeta CSS**
+   - Botón derecho → **"New Folder"** → Nombre: `css`
+   - Entra a esa carpeta
+   - Sube el archivo `estilos.css`
+
+4. **Crea la carpeta JS**
+   - Vuelve a `public_html`
+   - Botón derecho → **"New Folder"** → Nombre: `js`
+   - Entra a esa carpeta
+   - Sube el archivo `main.js`
+
+### OPCIÓN B: Usar FTP (Más rápido para múltiples archivos)
+
+1. **Obtener datos FTP**
+   - En Hostinger, ve a **Hosting** → **Settings**
+   - Busca **FTP/SFTP**
+   - Anota:
+     - Host: `ftp.tudominio.com`
+     - Usuario: Tu usuario
+     - Contraseña: Tu contraseña
+
+2. **Usar un cliente FTP** (FileZilla - gratuito)
+   - Descarga FileZilla
+   - File → Site Manager → New Site
+   - Completa con tus datos FTP
+   - Arrastra y suelta archivos
+
+---
+
+## PASO 4: Verificar la Estructura
+
+Dentro de `public_html` debe verse así:
+
+```
+public_html/
+├── index.html                 ✅
+├── catalogo.html             ✅
+├── sobre-nosotros.html       ✅
+├── contacto.html             ✅
+├── css/
+│   └── estilos.css          ✅
+└── js/
+    └── main.js              ✅
+```
+
+---
+
+## PASO 5: Configurar el Dominio
+
+### 5.1 Si YA tienes dominio
+
+1. En Hostinger, ve a **Domains**
+2. Si tu dominio no está apuntado:
+   - Ve a tu registrador (GoDaddy, etc.)
+   - Apunta los nameservers a Hostinger
+   - Espera 24-48 horas
+
+### 5.2 Si NO tienes dominio aún
+
+1. En Hostinger, click en **Domains**
+2. **Register new domain** o **Get a domain**
+3. Busca `robinherrajes.mx` o similar
+4. Compra y configura
+
+---
+
+## PASO 6: Pruebar el Sitio
+
+### 6.1 Acceder al sitio
+
+Espera 5-10 minutos después de subir los archivos.
+
+En tu navegador escribe:
+- `tudominio.com` → Debería mostrar tu página de inicio
+- `tudominio.com/catalogo.html` → Debería mostrar el catálogo
+- `tudominio.com/sobre-nosotros.html` → Acerca de
+- `tudominio.com/contacto.html` → Contacto
+
+### 6.2 Verificar funcionalidades
+
+✅ Búsqueda en el catálogo
+✅ Filtros (categoría y material)
+✅ Click en "Ver Detalles" abre modal
+✅ Botón WhatsApp funciona
+✅ Formulario de contacto funciona
+✅ Links de navegación funcionan
+✅ Estilos cargan correctamente
+
+---
+
+## PASO 7: Configuración Avanzada (Opcional)
+
+### 7.1 Activar HTTPS (SSL)
+
+Hostinger lo hace automáticamente, pero verifica:
+
+1. En panel → **Hosting** → **SSL**
+2. Busca tu dominio
+3. Debe estar en verde (Secure)
+
+### 7.2 Redirigir www a no-www (o viceversa)
+
+En Hostinger → **Hosting** → **Redirects**:
+- De: `www.tudominio.com`
+- A: `tudominio.com`
+
+### 7.3 Agregar Email Profesional (Opcional)
+
+En Hostinger → **Email**:
+- Crear cuenta: `info@tudominio.com`
+- Usar desde tu correo
+
+---
+
+## PASO 8: Hacer el Formulario Funcional
+
+Actualmente el formulario muestra "Enviado" pero no envía emails.
+
+### Opción 1: Usar Formspree (Fácil - 5 minutos)
+
+1. Ve a `formspree.io`
+2. Regístrate
+3. En tus archivos HTML, en `contacto.html`:
+
+Busca:
+```html
+<form id="contactForm" onsubmit="handleSubmit(event)">
+```
+
+Reemplaza por:
+```html
+<form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+```
+
+(Reemplaza `YOUR_FORM_ID` con el que genera Formspree)
+
+Quita estos atributos:
+```html
+id="contactForm" onsubmit="handleSubmit(event)"
+```
+
+Esto eliminará la validación JavaScript pero Formspree se encargará.
+
+### Opción 2: Usar el Host PHP (Si incluye PHP)
+
+1. Crea archivo `enviar-email.php`:
+
+```php
+<?php
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    $nombre = $_POST['nombre'] ?? '';
+    $email = $_POST['email'] ?? '';
+    $asunto = $_POST['asunto'] ?? '';
+    $mensaje = $_POST['mensaje'] ?? '';
+    
+    $to = 'tu-email@tudominio.com';
+    $subject = "Contacto: " . $asunto;
+    $body = "Nombre: $nombre\nEmail: $email\nAsunto: $asunto\n\nMensaje:\n$mensaje";
+    $headers = "From: $email";
+    
+    if (mail($to, $subject, $body, $headers)) {
+        echo json_encode(['success' => true]);
+    } else {
+        echo json_encode(['success' => false]);
+    }
+}
+?>
+```
+
+2. En `contacto.html`, cambia:
+
+```html
+<form id="contactForm" onsubmit="handleSubmit(event)" action="enviar-email.php" method="POST">
+```
+
+---
+
+## PASO 9: Optimizaciones (Recomendadas)
+
+### 9.1 Agregar Analytics
+
+En todos los archivos HTML, en la sección `<head>`, agrega:
+
+```html
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+</script>
+```
+
+(Reemplaza `G-XXXXXXXXXX` con tu ID de Google Analytics)
+
+### 9.2 Mejorar Velocidad
+
+1. En Hostinger → **Tools** → **Caching**
+2. Activa: **PHP**, **Browser Caching**
+
+---
+
+## PASO 10: Mantenimiento
+
+### Actualizar productos
+
+1. Abre `js/main.js`
+2. En el array `productos = [...]`
+3. Agrega nuevos productos o edita existentes
+
+### Cambiar información
+
+- Teléfono: Busca en todos HTML
+- Email: Busca en todos HTML
+- Redes sociales: En footer de cada HTML
+- Colores: En `css/estilos.css`
+
+---
+
+## 🐛 SOLUCIÓN DE PROBLEMAS
+
+### Problema: Veo "Error 404"
+**Solución:** Los archivos HTML no están en `public_html`. Verifica la ruta.
+
+### Problema: Estilos no cargan
+**Solución:** La ruta a `css/estilos.css` es incorrecta. Verifica que la carpeta `css` exista.
+
+### Problema: Iconos no se ven
+**Solución:** Font Awesome se carga desde CDN. Verifica tu conexión a internet.
+
+### Problema: WhatsApp abre pero vacío
+**Solución:** El número está mal en `js/main.js`. Debe ser sin símbolos y con código país.
+
+### Problema: Página muy lenta
+**Solución:**
+- Hostinger → Hosting → Performance → Optimize
+- Activa caché
+- Verifica límite de visitas
+
+---
+
+## 📊 INFORMACIÓN TÉCNICA
+
+| Aspecto | Valor |
+|---------|-------|
+| **Hosting** | Hostinger Compartido |
+| **Lenguaje** | HTML5 + CSS3 + JavaScript |
+| **Database** | No requiere |
+| **Tamaño Total** | ~150 KB |
+| **Velocidad Carga** | < 2 segundos |
+| **Compatible** | Todos los navegadores |
+
+---
+
+## ✅ CHECKLIST FINAL
+
+- [ ] Archivos subidos a Hostinger
+- [ ] Estructura correcta (html, css, js)
+- [ ] Dominio configurado
+- [ ] HTTPS activado
+- [ ] WhatsApp funciona
+- [ ] Catálogo carga
+- [ ] Búsqueda funciona
+- [ ] Filtros funcionan
+- [ ] Modal se abre
+- [ ] Links internos funcionan
+- [ ] Formulario se envía (parcialmente)
+- [ ] Responsive en móvil
+- [ ] Sin errores en consola
+
+---
+
+## 📞 SOPORTE HOSTINGER
+
+Si tienes problemas:
+1. Hostinger Chat en vivo (24/7)
+2. Hostinger Knowledge Base
+3. Tickets de soporte
+
+---
+
+**¡Tu sitio está listo para el éxito! 🎉**
+
+Última actualización: 2024

@@ -1,0 +1,69 @@
+{
+  "proyecto": "Robin Herrajes - Sitio Web",
+  "version": "2.0",
+  "fecha": "2024-06-29",
+  "empresa": {
+    "nombre": "Robin Herrajes",
+    "ciudad": "Mérida",
+    "estado": "Yucatán",
+    "pais": "México",
+    "edad": 45,
+    "tipo": "Distribuidor Autorizado Herralum"
+  },
+  "contacto": {
+    "telefono": "(33) 3666-0312",
+    "email": "herraform@herralum.com",
+    "whatsapp": "5299999999"
+  },
+  "redes_sociales": {
+    "facebook": "",
+    "instagram": "",
+    "linkedin": "",
+    "tiktok": ""
+  },
+  "colores": {
+    "azul_principal": "#003A7F",
+    "rojo": "#E31E24",
+    "blanco": "#FFFFFF",
+    "gris": "#f8f9fa"
+  },
+  "categorias": [
+    "Bisagras",
+    "Barras de Empuje",
+    "Cerraduras",
+    "Sistemas Automáticos",
+    "Accesorios",
+    "Herrajes Especializados"
+  ],
+  "marcas_representadas": [
+    "Ryobi",
+    "Comenza",
+    "Inter Hornos",
+    "Geze",
+    "GCC",
+    "Star",
+    "Sheridan",
+    "Garni",
+    "BEA",
+    "Fuji",
+    "Turomas",
+    "Ispim"
+  ],
+  "secciones": {
+    "hero": true,
+    "categorias": true,
+    "productos": true,
+    "testimonios": true,
+    "por_que_elegir": true,
+    "marcas_carrusel": true,
+    "catalogo": true,
+    "contacto": true
+  },
+  "instrucciones": {
+    "paso_1": "Actualizar contacto (teléfono, email, WhatsApp)",
+    "paso_2": "Agregar logo en img/logo.png",
+    "paso_3": "Agregar redes sociales en contacto.html",
+    "paso_4": "Subir a Hostinger (ver INSTRUCCIONES-HOSTINGER.txt)",
+    "paso_5": "Extraer productos del PDF (opcional, ver GUIA-EXTRAER-PDF.md)"
+  }
+}

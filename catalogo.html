@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Catálogo completo de herrajes para aluminio y vidrio - Robin Herrajes">
+    <title>Catálogo - Robin Herrajes</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="header">
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <img src="img/logo.png" alt="Robin" style="height: 40px; margin-right: 10px;">
+                <span>Robin Herrajes</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="catalogo.html" class="active">Catálogo</a></li>
+                <li><a href="sobre-nosotros.html">Nosotros</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<!-- PAGE HEADER -->
+<section class="page-header">
+    <div class="container">
+        <h1>Catálogo de Productos</h1>
+        <p>Más de 1000 productos disponibles para profesionales del aluminio y vidrio</p>
+    </div>
+</section>
+
+<!-- BANNER INFORMATIVO -->
+<section class="catalogo-banner-info">
+    <div class="container">
+        <div class="banner-content">
+            <div class="banner-icon">
+                <i class="fas fa-info-circle"></i>
+            </div>
+            <div class="banner-text">
+                <h3>🎯 Productos más Frecuentes</h3>
+                <p>Este catálogo online muestra nuestros <strong>productos más vendidos y frecuentes</strong>. Para ver el <strong>catálogo completo con más de 1000 productos</strong>, descarga nuestro PDF profesional.</p>
+            </div>
+            <div class="banner-action">
+                <a href="#" class="btn btn-primary btn-sm">
+                    <i class="fas fa-download"></i> Descargar Catálogo Completo
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- MAIN CATALOG -->
+<section class="catalogo-section">
+    <div class="container">
+        <div class="catalogo-wrapper">
+            
+            <!-- SIDEBAR FILTROS -->
+            <aside class="filtros-sidebar">
+                <div class="filtro-group">
+                    <h3>Buscar Producto</h3>
+                    <div class="search-box">
+                        <input type="text" id="buscador" placeholder="Código o nombre..." />
+                        <i class="fas fa-search"></i>
+                    </div>
+                </div>
+
+                <div class="filtro-group">
+                    <h3>Categoría</h3>
+                    <label class="filtro-label">
+                        <input type="checkbox" class="filtro-check" value="bisagras" />
+                        <span>Bisagras</span>
+                    </label>
+                    <label class="filtro-label">
+                        <input type="checkbox" class="filtro-check" value="barras" />
+                        <span>Barras de Empuje</span>
+                    </label>
+                    <label class="filtro-label">
+                        <input type="checkbox" class="filtro-check" value="cerraduras" />
+                        <span>Cerraduras</span>
+                    </label>
+                    <label class="filtro-label">
+                        <input type="checkbox" class="filtro-check" value="sistemas" />
+                        <span>Sistemas Automáticos</span>
+                    </label>
+                    <label class="filtro-label">
+                        <input type="checkbox" class="filtro-check" value="accesorios" />
+                        <span>Accesorios</span>
+                    </label>
+                    <label class="filtro-label">
+                        <input type="checkbox" class="filtro-check" value="herrajes" />
+                        <span>Herrajes Especiales</span>
+                    </label>
+                </div>
+
+                <div class="filtro-group">
+                    <h3>Material</h3>
+                    <label class="filtro-label">
+                        <input type="checkbox" class="filtro-material" value="aluminio" />
+                        <span>Aluminio</span>
+                    </label>
+                    <label class="filtro-label">
+                        <input type="checkbox" class="filtro-material" value="acero" />
+                        <span>Acero Inoxidable</span>
+                    </label>
+                    <label class="filtro-label">
+                        <input type="checkbox" class="filtro-material" value="combinado" />
+                        <span>Combinado</span>
+                    </label>
+                </div>
+
+                <button class="btn-limpiar" onclick="limpiarFiltros()">Limpiar Filtros</button>
+            </aside>
+
+            <!-- GRID DE PRODUCTOS -->
+            <div class="catalogo-main">
+                
+                <!-- BISAGRAS -->
+                <div class="categoria-seccion" id="bisagras">
+                    <h2 class="categoria-titulo">Bisagras</h2>
+                    <div class="productos-grid" id="grid-bisagras">
+                        
+                        <!-- Bisagra 2177 -->
+                        <div class="producto-card" data-categoria="bisagras" data-material="aluminio">
+                            <div class="producto-imagen">
+                                <div class="placeholder-img" style="background: linear-gradient(135deg, #003A7F, #0056B3);">
+                                    <i class="fas fa-door-open"></i>
+                                </div>
+                            </div>
+                            <div class="producto-info">
+                                <p class="codigo">2177</p>
+                                <h4>Bisagra Eurovent 2177</h4>
+                                <p class="especificacion"><strong>Material:</strong> Aluminio</p>
+                                <p class="especificacion"><strong>Acabados:</strong> Blanco, gris, café, negro</p>
+                                <p class="especificacion"><strong>Uso:</strong> Puertas y ventanas abatibles</p>
+                                <button class="btn-info" onclick="showModal('2177', 'Bisagra Eurovent 2177', 'Aluminio', 'Puertas y ventanas abatibles', 'Blanco, gris, café, negro')">Ver Detalles</button>
+                                <button class="btn-cotizar" onclick="cotizarWhatsApp('2177')"><i class="fab fa-whatsapp"></i> Cotizar</button>
+                            </div>
+                        </div>
+
+                        <!-- Bisagra 2296002 -->
+                        <div class="producto-card" data-categoria="bisagras" data-material="acero">
+                            <div class="producto-imagen">
+                                <div class="placeholder-img" style="background: linear-gradient(135deg, #E31E24, #B21218);">
+                                    <i class="fas fa-door-open"></i>
+                                </div>
+                            </div>
+                            <div class="producto-info">
+                                <p class="codigo">2296002</p>
+                                <h4>Bisagra de 2 Patas 2296002</h4>
+                                <p class="especificacion"><strong>Material:</strong> Aluminio 6063 con eje de acero</p>
+                                <p class="especificacion"><strong>Acabados:</strong> Blanco, gris, café</p>
+                                <p class="especificacion"><strong>Peso:</strong> 75kg por par</p>
+                                <button class="btn-info" onclick="showModal('2296002', 'Bisagra de 2 Patas 2296002', 'Aluminio 6063 con eje acero', 'Puertas y ventanas abatibles línea España 1400', 'Blanco, gris, café, negro')">Ver Detalles</button>
+                                <button class="btn-cotizar" onclick="cotizarWhatsApp('2296002')"><i class="fab fa-whatsapp"></i> Cotizar</button>
+                            </div>
+                        </div>
+
+                        <!-- Bisagra 2296003 -->
+                        <div class="producto-card" data-categoria="bisagras" data-material="acero">
+                            <div class="producto-imagen">
+                                <div class="placeholder-img" style="background: linear-gradient(135deg, #00A86B, #008C4D);">
+                                    <i class="fas fa-door-open"></i>
+                                </div>
+                            </div>
+                            <div class="producto-info">
+                                <p class="codigo">2296003</p>
+                                <h4>Bisagra de 3 Patas 2296003</h4>
+                                <p class="especificacion"><strong>Material:</strong> Aluminio 6063 con eje de acero</p>
+                                <p class="especificacion"><strong>Acabados:</strong> Blanco, gris, café</p>
+                                <p class="especificacion"><strong>Peso:</strong> 95kg por par</p>
+                                <button class="btn-info" onclick="showModal('2296003', 'Bisagra de 3 Patas 2296003', 'Aluminio 6063 con eje acero', 'Puertas y ventanas abatibles línea España 1400', 'Blanco, gris, café, negro')">Ver Detalles</button>
+                                <button class="btn-cotizar" onclick="cotizarWhatsApp('2296003')"><i class="fab fa-whatsapp"></i> Cotizar</button>
+                            </div>
+                        </div>
+
+                        <!-- Bisagra 1032135 -->
+                        <div class="producto-card" data-categoria="bisagras" data-material="acero">
+                            <div class="producto-imagen">
+                                <div class="placeholder-img" style="background: linear-gradient(135deg, #FF6B35, #D94A1C);">
+                                    <i class="fas fa-door-open"></i>
+                                </div>
+                            </div>
+                            <div class="producto-info">
+                                <p class="codigo">1032135</p>
+                                <h4>Bisagra Tlaqueparque Vidrio 135°</h4>
+                                <p class="especificacion"><strong>Material:</strong> Acero inoxidable</p>
+                                <p class="especificacion"><strong>Tipo:</strong> Para vidrio a 135°</p>
+                                <p class="especificacion"><strong>Acabado:</strong> Cromado</p>
+                                <button class="btn-info" onclick="showModal('1032135', 'Bisagra Tlaqueparque Vidrio', 'Acero inoxidable', 'Para vidrio a 135°', 'Cromado')">Ver Detalles</button>
+                                <button class="btn-cotizar" onclick="cotizarWhatsApp('1032135')"><i class="fab fa-whatsapp"></i> Cotizar</button>
+                            </div>
+                        </div>
+
+                        <!-- Bisagra 1032180 -->
+                        <div class="producto-card" data-categoria="bisagras" data-material="acero">
+                            <div class="producto-imagen">
+                                <div class="placeholder-img" style="background: linear-gradient(135deg, #7C3AED, #5B21B6);">
+                                    <i class="fas fa-door-open"></i>
+                                </div>
+                            </div>
+                            <div class="producto-info">
+                                <p class="codigo">1032180</p>
+                                <h4>Bisagra Tlaqueparque Vidrio 180°</h4>
+                                <p class="especificacion"><strong>Material:</strong> Acero inoxidable</p>
+                                <p class="especificacion"><strong>Tipo:</strong> Para vidrio a 180°</p>
+                                <p class="especificacion"><strong>Acabado:</strong> Cromado</p>
+                                <button class="btn-info" onclick="showModal('1032180', 'Bisagra Tlaqueparque Vidrio 180°', 'Acero inoxidable', 'Para vidrio a 180°', 'Cromado')">Ver Detalles</button>
+                                <button class="btn-cotizar" onclick="cotizarWhatsApp('1032180')"><i class="fab fa-whatsapp"></i> Cotizar</button>
+                            </div>
+                        </div>
+
+                        <!-- Bisagra 1033 Muro -->
+                        <div class="producto-card" data-categoria="bisagras" data-material="acero">
+                            <div class="producto-imagen">
+                                <div class="placeholder-img" style="background: linear-gradient(135deg, #0891B2, #0E7490);">
+                                    <i class="fas fa-door-open"></i>
+                                </div>
+                            </div>
+                            <div class="producto-info">
+                                <p class="codigo">1033</p>
+                                <h4>Bisagra Tlaqueparque Muro 180°</h4>
+                                <p class="especificacion"><strong>Material:</strong> Acero inoxidable</p>
+                                <p class="especificacion"><strong>Tipo:</strong> Para vidrio a muro 180°</p>
+                                <p class="especificacion"><strong>Acabado:</strong> Cromado</p>
+                                <button class="btn-info" onclick="showModal('1033', 'Bisagra Tlaqueparque Muro', 'Acero inoxidable', 'Para vidrio a muro 180°', 'Cromado')">Ver Detalles</button>
+                                <button class="btn-cotizar" onclick="cotizarWhatsApp('1033')"><i class="fab fa-whatsapp"></i> Cotizar</button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- BARRAS DE EMPUJE -->
+                <div class="categoria-seccion" id="barras">
+                    <h2 class="categoria-titulo">Barras de Empuje</h2>
+                    <div class="productos-grid" id="grid-barras">
+                        
+                        <!-- Placa 2056000 -->
+                        <div class="producto-card" data-categoria="barras" data-material="aluminio">
+                            <div class="producto-imagen">
+                                <div class="placeholder-img" style="background: linear-gradient(135deg, #003A7F, #0056B3);">
+                                    <i class="fas fa-bars"></i>
+                                </div>
+                            </div>
+                            <div class="producto-info">
+                                <p class="codigo">2056000</p>
+                                <h4>Placa de Aluminio 2056000</h4>
+                                <p class="especificacion"><strong>Material:</strong> Aluminio 6063 T-5</p>
+                                <p class="especificacion"><strong>Largo:</strong> 50 cm</p>
+                                <p class="especificacion"><strong>Acabados:</strong> Blanco, E200, E400, natural</p>
+                                <button class="btn-info" onclick="showModal('2056000', 'Placa de Aluminio 2056000', 'Aluminio 6063 T-5', 'Barra de empuje 2056100/120', 'Blanco, E200, E400, natural')">Ver Detalles</button>
+                                <button class="btn-cotizar" onclick="cotizarWhatsApp('2056000')"><i class="fab fa-whatsapp"></i> Cotizar</button>
+                            </div>
+                        </div>
+
+                        <!-- Barra 2056100/120 -->
+                        <div class="producto-card" data-categoria="barras" data-material="aluminio">
+                            <div class="producto-imagen">
+                                <div class="placeholder-img" style="background: linear-gradient(135deg, #E31E24, #B21218);">
+                                    <i class="fas fa-bars"></i>
+                                </div>
+                            </div>
+                            <div class="producto-info">
+                                <p class="codigo">2056100/120</p>
+                                <h4>Barra de Empuje 2056100/120</h4>
+                                <p class="especificacion"><strong>Material:</strong> Aluminio 6063 T-5</p>
+                                <p class="especificacion"><strong>Largo:</strong> 100 y 120 cm</p>
+                                <p class="especificacion"><strong>Acabados:</strong> Blanco, E200, E400, natural</p>
+                                <button class="btn-info" onclick="showModal('2056100/120', 'Barra de Empuje 2056100/120', 'Aluminio 6063 T-5', 'Complemento de placa 2056000', 'Blanco, E200, E400, natural')">Ver Detalles</button>
+                                <button class="btn-cotizar" onclick="cotizarWhatsApp('2056100')"><i class="fab fa-whatsapp"></i> Cotizar</button>
+                            </div>
+                        </div>
+
+                        <!-- Barra 2058120 -->
+                        <div class="producto-card" data-categoria="barras" data-material="aluminio">
+                            <div class="producto-imagen">
+                                <div class="placeholder-img" style="background: linear-gradient(135deg, #00A86B, #008C4D);">
+                                    <i class="fas fa-bars"></i>
+                                </div>
+                            </div>
+                            <div class="producto-info">
+                                <p class="codigo">2058120</p>
+                                <h4>Barra de Bastón Estirada 2058120</h4>
+                                <p class="especificacion"><strong>Material:</strong> Aluminio 6063 T-0</p>
+                                <p class="especificacion"><strong>Largo:</strong> 120 cm</p>
+                                <p class="especificacion"><strong>Acabados:</strong> Blanco, E200, E400, natural</p>
+                                <button class="btn-info" onclick="showModal('2058120', 'Barra de Bastón Estirada', 'Aluminio 6063 T-0', 'Sistema de barra de bastón', 'Blanco, E200, E400, natural')">Ver Detalles</button>
+                                <button class="btn-cotizar" onclick="cotizarWhatsApp('2058120')"><i class="fab fa-whatsapp"></i> Cotizar</button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- CERRADURAS -->
+                <div class="categoria-seccion" id="cerraduras">
+                    <h2 class="categoria-titulo">Cerraduras y Control de Acceso</h2>
+                    <div class="productos-grid" id="grid-cerraduras">
+                        
+                        <!-- Cierre 1015022 -->
+                        <div class="producto-card" data-categoria="cerraduras" data-material="acero">
+                            <div class="producto-imagen">
+                                <div class="placeholder-img" style="background: linear-gradient(135deg, #003A7F, #0056B3);">
+                                    <i class="fas fa-lock"></i>
+                                </div>
+                            </div>
+                            <div class="producto-info">
+                                <p class="codigo">1015022</p>
+                                <h4>Grapa p/ Sujeción de Cristal</h4>
+                                <p class="especificacion"><strong>Material:</strong> Acero inoxidable</p>
+                                <p class="especificacion"><strong>Tipo:</strong> Sujeción de cristal en sistema</p>
+                                <p class="especificacion"><strong>Acabado:</strong> Cromado</p>
+                                <button class="btn-info" onclick="showModal('1015022', 'Grapa p/ Sujeción de Cristal', 'Acero inoxidable', 'Sujeción de cristal en sistema', 'Cromado')">Ver Detalles</button>
+                                <button class="btn-cotizar" onclick="cotizarWhatsApp('1015022')"><i class="fab fa-whatsapp"></i> Cotizar</button>
+                            </div>
+                        </div>
+
+                        <!-- Sensor 1015012 -->
+                        <div class="producto-card" data-categoria="cerraduras" data-material="acero">
+                            <div class="producto-imagen">
+                                <div class="placeholder-img" style="background: linear-gradient(135deg, #E31E24, #B21218);">
+                                    <i class="fas fa-lock"></i>
+                                </div>
+                            </div>
+                            <div class="producto-info">
+                                <p class="codigo">1015012</p>
+                                <h4>Perfil Tapa para Sistema Automático</h4>
+                                <p class="especificacion"><strong>Material:</strong> Aluminio</p>
+                                <p class="especificacion"><strong>Tipo:</strong> Tapa de sistema automático</p>
+                                <p class="especificacion"><strong>Acabados:</strong> Blanco, anodizado</p>
+                                <button class="btn-info" onclick="showModal('1015012', 'Perfil Tapa para Sistema Automático', 'Aluminio', 'Tapa de sistema automático', 'Blanco, anodizado')">Ver Detalles</button>
+                                <button class="btn-cotizar" onclick="cotizarWhatsApp('1015012')"><i class="fab fa-whatsapp"></i> Cotizar</button>
+                            </div>
+                        </div>
+
+                        <!-- Sensor 1015014 -->
+                        <div class="producto-card" data-categoria="cerraduras" data-material="acero">
+                            <div class="producto-imagen">
+                                <div class="placeholder-img" style="background: linear-gradient(135deg, #00A86B, #008C4D);">
+                                    <i class="fas fa-lock"></i>
+                                </div>
+                            </div>
+                            <div class="producto-info">
+                                <p class="codigo">1015014</p>
+                                <h4>Control de Acceso</h4>
+                                <p class="especificacion"><strong>Material:</strong> Acero inoxidable</p>
+                                <p class="especificacion"><strong>Tipo:</strong> Control de acceso automático</p>
+                                <p class="especificacion"><strong>Acabado:</strong> Cromado</p>
+                                <button class="btn-info" onclick="showModal('1015014', 'Control de Acceso', 'Acero inoxidable', 'Control de acceso automático', 'Cromado')">Ver Detalles</button>
+                                <button class="btn-cotizar" onclick="cotizarWhatsApp('1015014')"><i class="fab fa-whatsapp"></i> Cotizar</button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- SISTEMAS AUTOMÁTICOS -->
+                <div class="categoria-seccion" id="sistemas">
+                    <h2 class="categoria-titulo">Sistemas Automáticos</h2>
+                    <div class="productos-grid" id="grid-sistemas">
+                        
+                        <!-- Sistema 1014101 -->
+                        <div class="producto-card" data-categoria="sistemas" data-material="combinado">
+                            <div class="producto-imagen">
+                                <div class="placeholder-img" style="background: linear-gradient(135deg, #003A7F, #0056B3);">
+                                    <i class="fas fa-cogs"></i>
+                                </div>
+                            </div>
+                            <div class="producto-info">
+                                <p class="codigo">1014101</p>
+                                <h4>Carretilla p/ Sistema Automático Ryobi</h4>
+                                <p class="especificacion"><strong>Marca:</strong> Ryobi</p>
+                                <p class="especificacion"><strong>Tipo:</strong> Abridor automático</p>
+                                <p class="especificacion"><strong>Material:</strong> Aluminio y acero</p>
+                                <button class="btn-info" onclick="showModal('1014101', 'Sistema Automático Ryobi 1014101', 'Aluminio y acero', 'Abridor automático para puertas', 'Estándar')">Ver Detalles</button>
+                                <button class="btn-cotizar" onclick="cotizarWhatsApp('1014101')"><i class="fab fa-whatsapp"></i> Cotizar</button>
+                            </div>
+                        </div>
+
+                        <!-- Sistema 1014102 -->
+                        <div class="producto-card" data-categoria="sistemas" data-material="combinado">
+                            <div class="producto-imagen">
+                                <div class="placeholder-img" style="background: linear-gradient(135deg, #E31E24, #B21218);">
+                                    <i class="fas fa-cogs"></i>
+                                </div>
+                            </div>
+                            <div class="producto-info">
+                                <p class="codigo">1014102</p>
+                                <h4>Computadora p/ Sistema Automático</h4>
+                                <p class="especificacion"><strong>Marca:</strong> Ryobi</p>
+                                <p class="especificacion"><strong>Tipo:</strong> Control de sistema automático</p>
+                                <p class="especificacion"><strong>Función:</strong> Computadora de control</p>
+                                <button class="btn-info" onclick="showModal('1014102', 'Computadora p/ Sistema Automático', 'Electrónica', 'Control de sistema automático', 'Estándar')">Ver Detalles</button>
+                                <button class="btn-cotizar" onclick="cotizarWhatsApp('1014102')"><i class="fab fa-whatsapp"></i> Cotizar</button>
+                            </div>
+                        </div>
+
+                        <!-- Sistema 1014103 -->
+                        <div class="producto-card" data-categoria="sistemas" data-material="aluminio">
+                            <div class="producto-imagen">
+                                <div class="placeholder-img" style="background: linear-gradient(135deg, #00A86B, #008C4D);">
+                                    <i class="fas fa-cogs"></i>
+                                </div>
+                            </div>
+                            <div class="producto-info">
+                                <p class="codigo">1014103</p>
+                                <h4>Guía de Piso p/ Sistema Automático</h4>
+                                <p class="especificacion"><strong>Material:</strong> Aluminio</p>
+                                <p class="especificacion"><strong>Tipo:</strong> Guía de piso</p>
+                                <p class="especificacion"><strong>Sistema:</strong> Para sistemas automáticos Ryobi</p>
+                                <button class="btn-info" onclick="showModal('1014103', 'Guía de Piso p/ Sistema Automático', 'Aluminio', 'Guía de piso para sistemas automáticos', 'Estándar')">Ver Detalles</button>
+                                <button class="btn-cotizar" onclick="cotizarWhatsApp('1014103')"><i class="fab fa-whatsapp"></i> Cotizar</button>
+                            </div>
+                        </div>
+
+                        <!-- Sistema 1014104 -->
+                        <div class="producto-card" data-categoria="sistemas" data-material="aluminio">
+                            <div class="producto-imagen">
+                                <div class="placeholder-img" style="background: linear-gradient(135deg, #FF6B35, #D94A1C);">
+                                    <i class="fas fa-cogs"></i>
+                                </div>
+                            </div>
+                            <div class="producto-info">
+                                <p class="codigo">1014104</p>
+                                <h4>Motor para Sistema Automático Ryobi</h4>
+                                <p class="especificacion"><strong>Marca:</strong> Ryobi</p>
+                                <p class="especificacion"><strong>Tipo:</strong> Motor automático</p>
+                                <p class="especificacion"><strong>Aplicación:</strong> Sistemas de puertas automáticas</p>
+                                <button class="btn-info" onclick="showModal('1014104', 'Motor para Sistema Automático', 'Acero/Aluminio', 'Motor para sistemas automáticos', 'Estándar')">Ver Detalles</button>
+                                <button class="btn-cotizar" onclick="cotizarWhatsApp('1014104')"><i class="fab fa-whatsapp"></i> Cotizar</button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- ACCESORIOS -->
+                <div class="categoria-seccion" id="accesorios">
+                    <h2 class="categoria-titulo">Accesorios y Componentes</h2>
+                    <div class="productos-grid" id="grid-accesorios">
+                        
+                        <!-- Sensor 1015002 -->
+                        <div class="producto-card" data-categoria="accesorios" data-material="acero">
+                            <div class="producto-imagen">
+                                <div class="placeholder-img" style="background: linear-gradient(135deg, #003A7F, #0056B3);">
+                                    <i class="fas fa-box"></i>
+                                </div>
+                            </div>
+                            <div class="producto-info">
+                                <p class="codigo">1015002</p>
+                                <h4>Riel Principal p/ Sistema Automático</h4>
+                                <p class="especificacion"><strong>Material:</strong> Aluminio</p>
+                                <p class="especificacion"><strong>Tipo:</strong> Riel principal</p>
+                                <p class="especificacion"><strong>Sistema:</strong> Automático Ryobi</p>
+                                <button class="btn-info" onclick="showModal('1015002', 'Riel Principal p/ Sistema Automático', 'Aluminio', 'Riel principal para sistemas automáticos', 'Estándar')">Ver Detalles</button>
+                                <button class="btn-cotizar" onclick="cotizarWhatsApp('1015002')"><i class="fab fa-whatsapp"></i> Cotizar</button>
+                            </div>
+                        </div>
+
+                        <!-- Transformador 1015003 -->
+                        <div class="producto-card" data-categoria="accesorios" data-material="combinado">
+                            <div class="producto-imagen">
+                                <div class="placeholder-img" style="background: linear-gradient(135deg, #E31E24, #B21218);">
+                                    <i class="fas fa-box"></i>
+                                </div>
+                            </div>
+                            <div class="producto-info">
+                                <p class="codigo">1015003</p>
+                                <h4>Transformador p/ Sistema Automático</h4>
+                                <p class="especificacion"><strong>Tipo:</strong> Transformador eléctrico</p>
+                                <p class="especificacion"><strong>Función:</strong> Conversión de voltaje</p>
+                                <p class="especificacion"><strong>Sistema:</strong> Automático Ryobi</p>
+                                <button class="btn-info" onclick="showModal('1015003', 'Transformador p/ Sistema Automático', 'Cobre/Acero', 'Transformador para sistemas automáticos', 'Estándar')">Ver Detalles</button>
+                                <button class="btn-cotizar" onclick="cotizarWhatsApp('1015003')"><i class="fab fa-whatsapp"></i> Cotizar</button>
+                            </div>
+                        </div>
+
+                        <!-- Celda 1015004 -->
+                        <div class="producto-card" data-categoria="accesorios" data-material="aluminio">
+                            <div class="producto-imagen">
+                                <div class="placeholder-img" style="background: linear-gradient(135deg, #00A86B, #008C4D);">
+                                    <i class="fas fa-box"></i>
+                                </div>
+                            </div>
+                            <div class="producto-info">
+                                <p class="codigo">1015004</p>
+                                <h4>Celda Fotoeléctrica</h4>
+                                <p class="especificacion"><strong>Tipo:</strong> Celda fotoelectrónica</p>
+                                <p class="especificacion"><strong>Función:</strong> Sensor de movimiento</p>
+                                <p class="especificacion"><strong>Sistema:</strong> Automático Ryobi</p>
+                                <button class="btn-info" onclick="showModal('1015004', 'Celda Fotoeléctrica', 'Plástico/Electrónica', 'Sensor de movimiento', 'Blanco/Gris')">Ver Detalles</button>
+                                <button class="btn-cotizar" onclick="cotizarWhatsApp('1015004')"><i class="fab fa-whatsapp"></i> Cotizar</button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- HERRAJES ESPECIALIZADOS -->
+                <div class="categoria-seccion" id="herrajes">
+                    <h2 class="categoria-titulo">Herrajes Especializados</h2>
+                    <div class="productos-grid" id="grid-herrajes">
+                        
+                        <!-- Sensor 1015007 -->
+                        <div class="producto-card" data-categoria="herrajes" data-material="acero">
+                            <div class="producto-imagen">
+                                <div class="placeholder-img" style="background: linear-gradient(135deg, #003A7F, #0056B3);">
+                                    <i class="fas fa-wrench"></i>
+                                </div>
+                            </div>
+                            <div class="producto-info">
+                                <p class="codigo">1015007</p>
+                                <h4>Sensor Magic Switch Universal</h4>
+                                <p class="especificacion"><strong>Tipo:</strong> Sensor magnético</p>
+                                <p class="especificacion"><strong>Función:</strong> Activación automática</p>
+                                <p class="especificacion"><strong>Compatibilidad:</strong> Universal</p>
+                                <button class="btn-info" onclick="showModal('1015007', 'Sensor Magic Switch Universal', 'Plástico/Metal', 'Sensor magnético universal', 'Estándar')">Ver Detalles</button>
+                                <button class="btn-cotizar" onclick="cotizarWhatsApp('1015007')"><i class="fab fa-whatsapp"></i> Cotizar</button>
+                            </div>
+                        </div>
+
+                        <!-- Sensor 1015016 -->
+                        <div class="producto-card" data-categoria="herrajes" data-material="acero">
+                            <div class="producto-imagen">
+                                <div class="placeholder-img" style="background: linear-gradient(135deg, #E31E24, #B21218);">
+                                    <i class="fas fa-wrench"></i>
+                                </div>
+                            </div>
+                            <div class="producto-info">
+                                <p class="codigo">1015016</p>
+                                <h4>Carretilla para Sistema Automático</h4>
+                                <p class="especificacion"><strong>Material:</strong> Acero reforzado</p>
+                                <p class="especificacion"><strong>Tipo:</strong> Carretilla de apoyo</p>
+                                <p class="especificacion"><strong>Sistema:</strong> Automático</p>
+                                <button class="btn-info" onclick="showModal('1015016', 'Carretilla para Sistema Automático', 'Acero reforzado', 'Carretilla de soporte automático', 'Cromado')">Ver Detalles</button>
+                                <button class="btn-cotizar" onclick="cotizarWhatsApp('1015016')"><i class="fab fa-whatsapp"></i> Cotizar</button>
+                            </div>
+                        </div>
+
+                        <!-- Perno 1015030 -->
+                        <div class="producto-card" data-categoria="herrajes" data-material="acero">
+                            <div class="producto-imagen">
+                                <div class="placeholder-img" style="background: linear-gradient(135deg, #00A86B, #008C4D);">
+                                    <i class="fas fa-wrench"></i>
+                                </div>
+                            </div>
+                            <div class="producto-info">
+                                <p class="codigo">1015030</p>
+                                <h4>Herraj Hispague San Angel</h4>
+                                <p class="especificacion"><strong>Material:</strong> Acero inoxidable</p>
+                                <p class="especificacion"><strong>Tipo:</strong> Herraje especializado</p>
+                                <p class="especificacion"><strong>Acabado:</strong> Cromado</p>
+                                <button class="btn-info" onclick="showModal('1015030', 'Herraj Hispague San Angel', 'Acero inoxidable', 'Herraje especializado', 'Cromado')">Ver Detalles</button>
+                                <button class="btn-cotizar" onclick="cotizarWhatsApp('1015030')"><i class="fab fa-whatsapp"></i> Cotizar</button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-section">
+                <h4>Robin Herrajes</h4>
+                <p>Distribuidor Autorizado Herralum</p>
+                <p class="footer-year">Desde 1987 • 45 años de experiencia</p>
+            </div>
+
+            <div class="footer-section">
+                <h4>Enlaces</h4>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="catalogo.html">Catálogo</a></li>
+                    <li><a href="sobre-nosotros.html">Nosotros</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>Contacto</h4>
+                <p><i class="fas fa-phone"></i> (33) 3666-0312</p>
+                <p><i class="fas fa-envelope"></i> herraform@herralum.com</p>
+                <p><i class="fas fa-map-marker-alt"></i> Mérida, Yucatán</p>
+            </div>
+
+            <div class="footer-section">
+                <h4>Síguenos</h4>
+                <div class="social-links">
+                    <a href="#" title="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="#" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2024 Robin Herrajes. Todos los derechos reservados. Distribuidor Autorizado Herralum Industrial S.A. de C.V.</p>
+        </div>
+    </div>
+</footer>
+
+<!-- MODAL -->
+<div id="modal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <div id="modal-body"></div>
+    </div>
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>

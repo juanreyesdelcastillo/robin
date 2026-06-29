@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contacto - Robin Herrajes Mérida">
+    <title>Contacto - Robin Herrajes</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="header">
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <img src="img/logo.png" alt="Robin" style="height: 40px; margin-right: 10px;">
+                <span>Robin Herrajes</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="catalogo.html">Catálogo</a></li>
+                <li><a href="sobre-nosotros.html">Nosotros</a></li>
+                <li><a href="contacto.html" class="active">Contacto</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<!-- PAGE HEADER -->
+<section class="page-header">
+    <div class="container">
+        <h1>Contacto</h1>
+        <p>Estamos aquí para ayudarte. Contáctanos ahora</p>
+    </div>
+</section>
+
+<!-- MAIN CONTENT -->
+<section class="contacto-section">
+    <div class="container">
+        <div class="contacto-wrapper">
+            
+            <!-- INFORMACIÓN DE CONTACTO -->
+            <div class="contacto-info">
+                <h2>Información de Contacto</h2>
+
+                <!-- TELÉFONO -->
+                <div class="info-card">
+                    <div class="info-icon">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <div class="info-content">
+                        <h3>Teléfono</h3>
+                        <p>(33) 3666-0312</p>
+                        <p class="info-subtitle">Lunes a viernes 8:00 AM - 5:00 PM</p>
+                    </div>
+                </div>
+
+                <!-- EMAIL -->
+                <div class="info-card">
+                    <div class="info-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div class="info-content">
+                        <h3>Email</h3>
+                        <p><a href="mailto:correo@gmail.com">correo@gmail.com</a></p>
+                        <p class="info-subtitle">Responderemos en las próximas 24 horas</p>
+                    </div>
+                </div>
+
+                <!-- WHATSAPP -->
+                <div class="info-card">
+                    <div class="info-icon">
+                        <i class="fab fa-whatsapp"></i>
+                    </div>
+                    <div class="info-content">
+                        <h3>WhatsApp</h3>
+                        <p><a href="https://wa.me/52" target="_blank">Contactar por WhatsApp</a></p>
+                        <p class="info-subtitle">Respuesta inmediata a disponible</p>
+                    </div>
+                </div>
+
+                <!-- DIRECCIÓN -->
+                <div class="info-card">
+                    <div class="info-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <div class="info-content">
+                        <h3>Ubicación</h3>
+                        <p>Mérida, Yucatán, México</p>
+                        <p class="info-subtitle">Distribuidor local con alcance regional</p>
+                    </div>
+                </div>
+
+                <!-- HORARIOS -->
+                <div class="info-card">
+                    <div class="info-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <div class="info-content">
+                        <h3>Horarios de Atención</h3>
+                        <p><strong>Lunes a Viernes:</strong> 8:00 AM - 5:00 PM</p>
+                        <p><strong>Sábado:</strong> 9:00 AM - 2:00 PM</p>
+                        <p><strong>Domingo:</strong> Cerrado</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- FORMULARIO -->
+            <div class="contacto-form">
+                <h2>Envíanos un Mensaje</h2>
+                <form id="contactForm" onsubmit="handleSubmit(event)">
+                    
+                    <div class="form-group">
+                        <label for="nombre">Nombre Completo *</label>
+                        <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email *</label>
+                        <input type="email" id="email" name="email" required placeholder="tu@email.com">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="telefono">Teléfono/WhatsApp</label>
+                        <input type="tel" id="telefono" name="telefono" placeholder="Ej: +52 XXX XXX XXXX">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="empresa">Empresa</label>
+                        <input type="text" id="empresa" name="empresa" placeholder="Tu empresa">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="asunto">Asunto *</label>
+                        <select id="asunto" name="asunto" required>
+                            <option value="">Selecciona un asunto</option>
+                            <option value="cotizacion">Solicitar Cotización</option>
+                            <option value="informacion">Información de Producto</option>
+                            <option value="soporte">Soporte Técnico</option>
+                            <option value="distribuidor">Distribuidor Autorizado</option>
+                            <option value="otro">Otro</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="mensaje">Mensaje *</label>
+                        <textarea id="mensaje" name="mensaje" rows="5" required placeholder="Cuéntanos cómo podemos ayudarte..."></textarea>
+                    </div>
+
+                    <div class="form-group checkbox">
+                        <label for="privacidad">
+                            <input type="checkbox" id="privacidad" name="privacidad" required>
+                            Acepto la política de privacidad y autorizo el contacto
+                        </label>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-large">Enviar Mensaje</button>
+                </form>
+
+                <div id="formMessage" class="form-message"></div>
+            </div>
+
+        </div>
+
+        <!-- MAPA -->
+        <div class="mapa-section">
+            <h2>Ubicación</h2>
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.123456789!2d-87.2756!3d20.9674!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f4e3b3b3b3b3b3b%3A0x3b3b3b3b3b3b3b3b!2sRobin%20Herrajes!5e0!3m2!1ses!2smx!4v1234567890" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- MÉTODOS DE CONTACTO ALTERNOS -->
+<section class="contact-methods">
+    <div class="container">
+        <h2>Otras Formas de Contactarnos</h2>
+        <div class="methods-grid">
+            
+            <div class="method-card">
+                <div class="method-icon">
+                    <i class="fab fa-facebook"></i>
+                </div>
+                <h3>Facebook</h3>
+                <p>Síguenos en Facebook para novedades y promociones</p>
+                <a href="#" class="btn btn-secondary" target="_blank">Ir a Facebook</a>
+            </div>
+
+            <div class="method-card">
+                <div class="method-icon">
+                    <i class="fab fa-whatsapp"></i>
+                </div>
+                <h3>WhatsApp</h3>
+                <p>Comunícate directo con nosotros vía WhatsApp</p>
+                <a href="https://wa.me/52" class="btn btn-secondary" target="_blank">Abrir WhatsApp</a>
+            </div>
+
+            <div class="method-card">
+                <div class="method-icon">
+                    <i class="fab fa-instagram"></i>
+                </div>
+                <h3>Instagram</h3>
+                <p>Síguenos en Instagram para contenido visual</p>
+                <a href="#" class="btn btn-secondary" target="_blank">Ir a Instagram</a>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- PREGUNTAS FRECUENTES -->
+<section class="faq-section">
+    <div class="container">
+        <h2>Preguntas Frecuentes</h2>
+
+        <div class="faq-container">
+            <div class="faq-item">
+                <h3 class="faq-title" onclick="toggleFaq(this)">
+                    <span>¿Cuál es el tiempo de entrega?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </h3>
+                <div class="faq-content">
+                    <p>Contamos con disponibilidad de stock para la mayoría de productos. Las entregas locales se realizan en 24-48 horas. Para entregas fuera de Mérida, dependerá de la ubicación.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <h3 class="faq-title" onclick="toggleFaq(this)">
+                    <span>¿Ofrecen asesoramiento técnico?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </h3>
+                <div class="faq-content">
+                    <p>Sí, nuestro equipo está capacitado para brindarte asesoramiento técnico especializado sobre especificaciones, compatibilidad y selección de productos.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <h3 class="faq-title" onclick="toggleFaq(this)">
+                    <span>¿Hacen entregas a domicilio?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </h3>
+                <div class="faq-content">
+                    <p>Sí, realizamos entregas a domicilio en la zona de Mérida. Para consultar costos de envío fuera del área, contáctanos directamente.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <h3 class="faq-title" onclick="toggleFaq(this)">
+                    <span>¿Aceptan devoluciones?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </h3>
+                <div class="faq-content">
+                    <p>Sí, aceptamos devoluciones en su empaque original. Consulta nuestras políticas de devolución para más detalles.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <h3 class="faq-title" onclick="toggleFaq(this)">
+                    <span>¿Tienen descuentos por volumen?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </h3>
+                <div class="faq-content">
+                    <p>Sí, ofrecemos precios especiales y descuentos por compras en volumen. Contáctanos para una cotización personalizada.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <h3 class="faq-title" onclick="toggleFaq(this)">
+                    <span>¿Cómo puedo solicitar una cotización?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </h3>
+                <div class="faq-content">
+                    <p>Puedes solicitar cotización de varias formas: a través de este formulario, por teléfono al (33) 3666-0312, por email o por WhatsApp.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-section">
+                <h4>Robin Herrajes</h4>
+                <p>Distribuidor Autorizado Herralum</p>
+                <p class="footer-year">Desde 1987 • 45 años de experiencia</p>
+            </div>
+
+            <div class="footer-section">
+                <h4>Enlaces</h4>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="catalogo.html">Catálogo</a></li>
+                    <li><a href="sobre-nosotros.html">Nosotros</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>Contacto</h4>
+                <p><i class="fas fa-phone"></i> (33) 3666-0312</p>
+                <p><i class="fas fa-envelope"></i> correo@gmail.com</p>
+                <p><i class="fas fa-map-marker-alt"></i> Mérida, Yucatán</p>
+            </div>
+
+            <div class="footer-section">
+                <h4>Síguenos</h4>
+                <div class="social-links">
+                    <a href="#" title="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="#" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2024 Robin Herrajes. Todos los derechos reservados. Distribuidor Autorizado Herralum Industrial S.A. de C.V.</p>
+        </div>
+    </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
