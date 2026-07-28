@@ -159,6 +159,24 @@
   }
   .hero-copy .eyebrow{color:var(--alu); margin-bottom:18px;}
   .hero-copy .eyebrow::before{background:var(--red);}
+  .hero-badge{
+    position:absolute; z-index:3; bottom:-18px; left:24px;
+    background:#fff; color:var(--navy);
+    padding:11px 20px 11px 16px; border-radius:50px;
+    display:flex; align-items:center; gap:9px;
+    font-family:'IBM Plex Sans'; font-weight:600; font-size:13.5px;
+    box-shadow:0 12px 28px -8px rgba(0,0,0,0.4);
+  }
+  .hero-badge .stars{color:var(--red); font-size:12px; letter-spacing:1px;}
+  .hero-badge .divider{width:1px; height:16px; background:#d5d5d5;}
+  .hero-badge .sub{color:#666; font-weight:400; font-size:12.5px;}
+  .hero-gradient-corner{
+    position:absolute; z-index:1; pointer-events:none;
+    width:520px; height:520px; top:-160px; right:-160px;
+    background:conic-gradient(from 210deg at 50% 50%, var(--robin-blue) 0deg, var(--robin-blue) 90deg, var(--red) 150deg, transparent 210deg);
+    opacity:0.28; filter:blur(60px);
+    border-radius:50%;
+  }
   .hero h1{
     color:#fff;
     font-size:clamp(44px,6.4vw,84px);
@@ -724,6 +742,7 @@
 <main>
 
   <section class="hero" style="padding-top:0;">
+    <div class="hero-gradient-corner" aria-hidden="true"></div>
     <div class="hero-glow g1" aria-hidden="true"></div>
     <div class="hero-glow g2" aria-hidden="true"></div>
     <div class="wrap hero-inner">
@@ -756,6 +775,12 @@
           <text x="345" y="195" text-anchor="middle" class="diagram-label" transform="rotate(90 345 195)">62.0 mm</text>
           <text x="100" y="80" class="diagram-label">PERFIL 108 · SERIE VENTANA</text>
         </svg>
+        <div class="hero-badge">
+          <span class="stars">★★★★★</span>
+          <span>4.6</span>
+          <span class="divider"></span>
+          <span class="sub">89 reseñas en Google</span>
+        </div>
       </div>
     </div>
     <div class="hero-strip">
