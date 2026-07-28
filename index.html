@@ -10,21 +10,21 @@
 <style>
 
   :root{
-    --navy:#0E2A47;
-    --navy-deep:#0A2038;
-    --navy-darker:#071527;
-    --charcoal:#1B1E23;
-    --charcoal-deep:#131518;
-    --robin-blue:#1D4E89;
-    --robin-blue-lt:#4A7DC4;
-    --red:#C4342B;
-    --red-lt:#E0483C;
-    --alu:#B8C0C8;
-    --alu-dim:#8493A0;
-    --paper:#EDEFF0;
-    --paper-2:#E2E5E7;
-    --graphite:#14181C;
-    --line: rgba(184,192,200,0.22);
+    --navy:#003A7F;
+    --navy-deep:#002B61;
+    --navy-darker:#001C40;
+    --charcoal:#333333;
+    --charcoal-deep:#1F1F1F;
+    --robin-blue:#0056B3;
+    --robin-blue-lt:#5A93CE;
+    --red:#E31E24;
+    --red-lt:#E8484D;
+    --alu:#C7CBD1;
+    --alu-dim:#8B93A0;
+    --paper:#F5F5F5;
+    --paper-2:#E8E8E8;
+    --graphite:#1F1F1F;
+    --line: rgba(199,203,209,0.22);
     --shadow-lg: 0 24px 60px -20px rgba(6,16,30,0.55);
     --shadow-md: 0 14px 34px -14px rgba(6,16,30,0.4);
     --ease: cubic-bezier(.16,.8,.24,1);
@@ -79,10 +79,10 @@
   /* ===== NAV ===== */
   header.nav{
     position:sticky; top:0; z-index:50;
-    background:rgba(14,42,71,0.82);
+    background:rgba(0,28,64,0.85);
     backdrop-filter:blur(14px) saturate(1.4);
     -webkit-backdrop-filter:blur(14px) saturate(1.4);
-    border-bottom:1px solid rgba(184,192,200,0.15);
+    border-bottom:1px solid rgba(199,203,209,0.15);
     transition:padding .25s var(--ease), box-shadow .25s var(--ease);
   }
   header.nav.scrolled{box-shadow:var(--shadow-md);}
@@ -122,7 +122,7 @@
   /* ===== HERO ===== */
   .hero{
     background:
-      linear-gradient(155deg, var(--navy-darker) 0%, var(--navy) 46%, var(--navy-deep) 100%);
+      linear-gradient(155deg, var(--navy-darker) 0%, var(--navy-deep) 55%, var(--navy-darker) 100%);
     position:relative;
     overflow:hidden;
     padding:76px 0 0;
@@ -139,15 +139,15 @@
   .hero::after{
     content:"";
     position:absolute; inset:0;
-    background:radial-gradient(ellipse 70% 60% at 50% 0%, rgba(14,42,71,0) 0%, var(--navy-deep) 82%);
+    background:radial-gradient(ellipse 70% 60% at 50% 0%, rgba(0,58,127,0) 0%, var(--navy-deep) 82%);
     pointer-events:none;
   }
   .hero-glow{
     position:absolute; z-index:1; pointer-events:none; border-radius:50%;
     filter:blur(70px); opacity:0.5;
   }
-  .hero-glow.g1{width:480px; height:480px; background:radial-gradient(circle,rgba(58,111,176,0.55),transparent 70%); top:-140px; right:-100px;}
-  .hero-glow.g2{width:360px; height:360px; background:radial-gradient(circle,rgba(196,52,43,0.35),transparent 70%); bottom:60px; left:-120px;}
+  .hero-glow.g1{width:480px; height:480px; background:radial-gradient(circle,rgba(0,86,179,0.55),transparent 70%); top:-140px; right:-100px;}
+  .hero-glow.g2{width:360px; height:360px; background:radial-gradient(circle,rgba(227,30,36,0.35),transparent 70%); bottom:60px; left:-120px;}
   .hero-stripes{
     position:absolute; z-index:1; top:96px; right:-60px; width:340px; height:120px;
     pointer-events:none; opacity:0.9;
@@ -170,7 +170,7 @@
   }
   .hero h1 span::after{
     content:""; position:absolute; left:-4px; right:-6px; bottom:6px; height:0.28em;
-    background:rgba(196,52,43,0.9); z-index:-1;
+    background:rgba(227,30,36,0.9); z-index:-1;
     transform:skewX(-8deg) scaleX(0); transform-origin:left;
     animation:swipeIn .7s var(--ease) 0.5s forwards;
   }
@@ -206,12 +206,12 @@
     background:var(--red-lt);
     transform:translateX(-100%); transition:transform .32s var(--ease);
   }
-  .btn-primary:hover{transform:translateY(-2px); box-shadow:0 14px 28px -10px rgba(196,52,43,0.5);}
+  .btn-primary:hover{transform:translateY(-2px); box-shadow:0 14px 28px -10px rgba(227,30,36,0.5);}
   .btn-primary:hover::before{transform:translateX(0);}
   .btn-ghost{
     color:#fff; text-decoration:none; font-weight:600; font-size:15px;
     padding:15px 26px; border-radius:2px;
-    border:1px solid rgba(184,192,200,0.4);
+    border:1px solid rgba(199,203,209,0.4);
     display:inline-flex; align-items:center; gap:10px;
     transition:border-color .2s ease, transform .25s var(--ease), background .2s ease;
   }
@@ -229,7 +229,7 @@
   .diagram-dim{stroke:var(--red); stroke-width:1;}
 
   .hero-strip{
-    border-top:1px solid rgba(184,192,200,0.18);
+    border-top:1px solid rgba(199,203,209,0.18);
     background:var(--navy-deep);
     position:relative; z-index:2;
   }
@@ -240,7 +240,7 @@
   .strip-item{
     flex:1 1 200px;
     padding:22px 24px;
-    border-right:1px solid rgba(184,192,200,0.14);
+    border-right:1px solid rgba(199,203,209,0.14);
     transition:background .25s ease;
   }
   .strip-item:hover{background:rgba(255,255,255,0.03);}
@@ -277,7 +277,7 @@
   .gallery-item:hover img{transform:scale(1.07);}
   .gallery-item::after{
     content:""; position:absolute; inset:0;
-    background:linear-gradient(to top, rgba(7,21,39,0.82) 0%, rgba(7,21,39,0) 46%);
+    background:linear-gradient(to top, rgba(0,28,64,0.82) 0%, rgba(0,28,64,0) 46%);
     opacity:0; transition:opacity .3s ease;
   }
   .gallery-item:hover::after{opacity:1;}
@@ -322,14 +322,14 @@
   .nameplate::before{
     content:"";
     position:absolute; top:10px; left:10px; right:10px; bottom:10px;
-    border:1px dashed rgba(184,192,200,0.25);
+    border:1px dashed rgba(199,203,209,0.25);
     border-radius:2px;
     pointer-events:none;
   }
   .nameplate-row{
     display:grid; grid-template-columns:1fr 1fr; gap:24px;
     padding:18px 6px;
-    border-bottom:1px solid rgba(184,192,200,0.15);
+    border-bottom:1px solid rgba(199,203,209,0.15);
   }
   .nameplate-row:last-child{border-bottom:none;}
   .nameplate-row .k{
@@ -388,7 +388,7 @@
   .catalog{background:var(--charcoal-deep); color:#fff;}
   .catalog-inner{
     display:grid; grid-template-columns:1fr auto; gap:32px; align-items:center;
-    border:1px solid rgba(184,192,200,0.16);
+    border:1px solid rgba(199,203,209,0.16);
     padding:40px;
     background:var(--charcoal);
     flex-wrap:wrap;
@@ -405,7 +405,7 @@
   .branches .section-head h2{color:var(--graphite);}
   .branches .section-head p{color:#4b5560;}
   .branches-grid{display:grid; grid-template-columns:0.9fr 1.1fr; gap:18px;}
-  .branches-map{background:#0A2038; min-height:420px; position:relative; border-radius:6px; overflow:hidden; box-shadow:var(--shadow-md);}
+  .branches-map{background:var(--navy-deep); min-height:420px; position:relative; border-radius:6px; overflow:hidden; box-shadow:var(--shadow-md);}
   .branches-map iframe{width:100%; height:100%; min-height:420px; border:0; filter:grayscale(0.3) contrast(1.05);}
   .branches-list{
     display:flex; flex-direction:column;
@@ -413,7 +413,7 @@
   }
   .branch-card{
     padding:26px 28px;
-    border-bottom:1px solid rgba(184,192,200,0.14);
+    border-bottom:1px solid rgba(199,203,209,0.14);
     border-left:3px solid transparent;
     display:grid; grid-template-columns:auto 1fr; gap:20px;
     transition:background .25s ease, border-color .25s ease;
@@ -454,7 +454,7 @@
   .branch-card.preview em{color:var(--red-lt); font-style:normal; font-size:12px; font-weight:400;}
   .branch-card.pending h3{color:var(--alu);}
   .branch-card.pending .addr{
-    border:1px dashed rgba(184,192,200,0.4);
+    border:1px dashed rgba(199,203,209,0.4);
     padding:8px 10px; border-radius:2px;
     font-family:'IBM Plex Mono'; font-size:11.5px;
     letter-spacing:0.03em; text-transform:uppercase;
@@ -498,8 +498,8 @@
   .form-note{font-family:'IBM Plex Mono'; font-size:11px; color:var(--alu-dim); margin-top:14px; text-align:center;}
 
   /* ===== FOOTER ===== */
-  footer{background:var(--navy); color:var(--alu); padding:48px 0 28px;}
-  .footer-grid{display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:24px; padding-bottom:28px; border-bottom:1px solid rgba(184,192,200,0.15);}
+  footer{background:var(--navy-darker); color:var(--alu); padding:48px 0 28px;}
+  .footer-grid{display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:24px; padding-bottom:28px; border-bottom:1px solid rgba(199,203,209,0.15);}
   .footer-logo{
     display:inline-flex; align-items:center;
     background:rgba(255,255,255,0.94);
@@ -507,7 +507,7 @@
   }
   .herralum-badge{
     display:flex; align-items:center; gap:10px;
-    padding:6px 14px; border:1px solid rgba(184,192,200,0.25); border-radius:8px;
+    padding:6px 14px; border:1px solid rgba(199,203,209,0.25); border-radius:8px;
   }
   .herralum-badge span{font-family:'IBM Plex Mono'; font-size:10px; color:var(--alu-dim); text-transform:uppercase; letter-spacing:0.05em;}
   .herralum-badge img{height:18px; opacity:0.9;}
@@ -538,7 +538,7 @@
 
   /* ===== INTERIOR PAGE HEAD ===== */
   .page-head{
-    background:linear-gradient(155deg, var(--navy-darker) 0%, var(--navy) 55%, var(--navy-deep) 100%);
+    background:linear-gradient(155deg, var(--navy-darker) 0%, var(--navy-deep) 60%, var(--navy-darker) 100%);
     position:relative;
     overflow:hidden;
     padding:64px 0 44px;
@@ -605,7 +605,7 @@
     display:flex; justify-content:space-between; color:#333c44;
   }
   .ld-visual{
-    background:var(--navy); border:1px solid rgba(184,192,200,0.2);
+    background:var(--navy); border:1px solid rgba(199,203,209,0.2);
     aspect-ratio:1/0.85; display:flex; align-items:center; justify-content:center;
     padding:30px; border-radius:6px; overflow:hidden; box-shadow:var(--shadow-md);
   }
@@ -620,13 +620,13 @@
   /* ===== CATALOGO PAGE ===== */
   .cat-hero-panel{
     display:grid; grid-template-columns:1.1fr 0.9fr; gap:40px; align-items:center;
-    background:var(--navy-deep); border:1px solid rgba(184,192,200,0.2);
+    background:var(--navy-deep); border:1px solid rgba(199,203,209,0.2);
     padding:44px; color:#fff;
   }
   .cat-hero-panel h2{font-size:clamp(26px,3.4vw,38px); margin-bottom:14px;}
   .cat-hero-panel p{color:var(--alu); font-size:15px; line-height:1.7; margin-bottom:22px; max-width:460px;}
-  .cat-stats{display:flex; gap:0; border:1px solid rgba(184,192,200,0.25);}
-  .cat-stats div{flex:1; padding:18px; border-right:1px solid rgba(184,192,200,0.25); text-align:center;}
+  .cat-stats{display:flex; gap:0; border:1px solid rgba(199,203,209,0.25);}
+  .cat-stats div{flex:1; padding:18px; border-right:1px solid rgba(199,203,209,0.25); text-align:center;}
   .cat-stats div:last-child{border-right:none;}
   .cat-stats .num{font-family:'Big Shoulders Display'; font-weight:900; font-size:26px;}
   .cat-stats .lbl{font-family:'IBM Plex Mono'; font-size:10px; color:var(--alu-dim); margin-top:4px; text-transform:uppercase;}
@@ -637,10 +637,10 @@
   .index-table{width:100%; border-collapse:collapse; margin-top:8px;}
   .index-table th{
     text-align:left; font-family:'IBM Plex Mono'; font-size:11px; color:var(--alu-dim);
-    text-transform:uppercase; letter-spacing:0.06em; padding:12px 14px; border-bottom:1px solid rgba(184,192,200,0.25);
+    text-transform:uppercase; letter-spacing:0.06em; padding:12px 14px; border-bottom:1px solid rgba(199,203,209,0.25);
   }
-  .index-table td{padding:14px; border-bottom:1px solid rgba(184,192,200,0.14); font-size:14px;}
-  .index-table tr:hover td{background:rgba(184,192,200,0.05);}
+  .index-table td{padding:14px; border-bottom:1px solid rgba(199,203,209,0.14); font-size:14px;}
+  .index-table tr:hover td{background:rgba(199,203,209,0.05);}
   .index-table .code{font-family:'IBM Plex Mono'; color:var(--red); font-size:13px;}
 
   /* ===== CONTACTO PAGE (standalone) ===== */
@@ -664,7 +664,7 @@
   .contact-photo img{width:100%; height:100%; object-fit:cover; display:block; min-height:420px;}
   .contact-photo-cap{
     position:absolute; left:0; right:0; bottom:0; padding:28px 26px;
-    background:linear-gradient(to top, rgba(7,21,39,0.92) 10%, rgba(7,21,39,0.1));
+    background:linear-gradient(to top, rgba(0,28,64,0.92) 10%, rgba(0,28,64,0.1));
     color:#fff;
   }
   .contact-photo-cap p{font-size:14px; line-height:1.6; color:var(--alu); max-width:280px;}
@@ -779,37 +779,37 @@
       <div class="cat-grid">
         <a href="lineas.html#perfiles" class="cat-card" style="text-decoration:none; color:inherit;">
           <span class="cat-code">RB · PERFILES</span>
-          <svg viewBox="0 0 48 48" fill="none" stroke="#B8C0C8" stroke-width="1.6"><rect x="8" y="8" width="32" height="32" rx="2"/><rect x="16" y="16" width="16" height="16" rx="1"/></svg>
+          <svg viewBox="0 0 48 48" fill="none" stroke="#C7CBD1" stroke-width="1.6"><rect x="8" y="8" width="32" height="32" rx="2"/><rect x="16" y="16" width="16" height="16" rx="1"/></svg>
           <h3>Perfiles de aluminio</h3>
           <p>Series completas para ventana, puerta y cancelería, con especificaciones técnicas exactas.</p>
         </a>
         <a href="lineas.html#bisagras" class="cat-card" style="text-decoration:none; color:inherit;">
           <span class="cat-code">RB · BISAGRAS</span>
-          <svg viewBox="0 0 48 48" fill="none" stroke="#B8C0C8" stroke-width="1.6"><rect x="6" y="14" width="10" height="20" rx="1"/><rect x="32" y="14" width="10" height="20" rx="1"/><circle cx="24" cy="24" r="4"/><line x1="16" y1="24" x2="20" y2="24"/><line x1="28" y1="24" x2="32" y2="24"/></svg>
+          <svg viewBox="0 0 48 48" fill="none" stroke="#C7CBD1" stroke-width="1.6"><rect x="6" y="14" width="10" height="20" rx="1"/><rect x="32" y="14" width="10" height="20" rx="1"/><circle cx="24" cy="24" r="4"/><line x1="16" y1="24" x2="20" y2="24"/><line x1="28" y1="24" x2="32" y2="24"/></svg>
           <h3>Bisagras y pivotes</h3>
           <p>De piso, aéreas y de muro, para sistemas corredizos y abatibles de todos los tamaños.</p>
         </a>
         <a href="lineas.html#cerraduras" class="cat-card" style="text-decoration:none; color:inherit;">
           <span class="cat-code">RB · CERRADURAS</span>
-          <svg viewBox="0 0 48 48" fill="none" stroke="#B8C0C8" stroke-width="1.6"><rect x="14" y="10" width="20" height="28" rx="2"/><circle cx="24" cy="24" r="4"/><line x1="24" y1="20" x2="24" y2="16"/></svg>
+          <svg viewBox="0 0 48 48" fill="none" stroke="#C7CBD1" stroke-width="1.6"><rect x="14" y="10" width="20" height="28" rx="2"/><circle cx="24" cy="24" r="4"/><line x1="24" y1="20" x2="24" y2="16"/></svg>
           <h3>Chapas y cerraduras</h3>
           <p>Sistemas de cierre embutidos y de sobreponer para puertas de aluminio y cristal.</p>
         </a>
         <a href="lineas.html#jaladeras" class="cat-card" style="text-decoration:none; color:inherit;">
           <span class="cat-code">RB · JALADERAS</span>
-          <svg viewBox="0 0 48 48" fill="none" stroke="#B8C0C8" stroke-width="1.6"><rect x="18" y="6" width="12" height="36" rx="4"/><circle cx="24" cy="14" r="2" fill="#B8C0C8"/><circle cx="24" cy="34" r="2" fill="#B8C0C8"/></svg>
+          <svg viewBox="0 0 48 48" fill="none" stroke="#C7CBD1" stroke-width="1.6"><rect x="18" y="6" width="12" height="36" rx="4"/><circle cx="24" cy="14" r="2" fill="#C7CBD1"/><circle cx="24" cy="34" r="2" fill="#C7CBD1"/></svg>
           <h3>Jaladeras y manijas</h3>
           <p>Para puerta de cristal, aluminio y cancel de baño, en distintos acabados.</p>
         </a>
         <a href="lineas.html#selladores" class="cat-card" style="text-decoration:none; color:inherit;">
           <span class="cat-code">RB · SELLADORES</span>
-          <svg viewBox="0 0 48 48" fill="none" stroke="#B8C0C8" stroke-width="1.6"><path d="M16 8 h16 v6 l-4 4 v22 h-8 v-22 l-4 -4 z"/><line x1="18" y1="20" x2="30" y2="20"/></svg>
+          <svg viewBox="0 0 48 48" fill="none" stroke="#C7CBD1" stroke-width="1.6"><path d="M16 8 h16 v6 l-4 4 v22 h-8 v-22 l-4 -4 z"/><line x1="18" y1="20" x2="30" y2="20"/></svg>
           <h3>Selladores y adhesivos</h3>
           <p>Acrílicos, estructurales y espumas expansivas para instalación y acabado.</p>
         </a>
         <a href="lineas.html#automaticos" class="cat-card" style="text-decoration:none; color:inherit;">
           <span class="cat-code">RB · AUTOMÁTICOS</span>
-          <svg viewBox="0 0 48 48" fill="none" stroke="#B8C0C8" stroke-width="1.6"><rect x="6" y="20" width="36" height="8" rx="1"/><circle cx="14" cy="24" r="2" fill="#B8C0C8"/><circle cx="34" cy="24" r="2" fill="#B8C0C8"/><line x1="24" y1="20" x2="24" y2="8"/><line x1="20" y1="12" x2="24" y2="8" /><line x1="28" y1="12" x2="24" y2="8"/></svg>
+          <svg viewBox="0 0 48 48" fill="none" stroke="#C7CBD1" stroke-width="1.6"><rect x="6" y="20" width="36" height="8" rx="1"/><circle cx="14" cy="24" r="2" fill="#C7CBD1"/><circle cx="34" cy="24" r="2" fill="#C7CBD1"/><line x1="24" y1="20" x2="24" y2="8"/><line x1="20" y1="12" x2="24" y2="8" /><line x1="28" y1="12" x2="24" y2="8"/></svg>
           <h3>Sistemas automáticos</h3>
           <p>Puertas automáticas, sensores, controles de acceso y componentes de instalación.</p>
         </a>
